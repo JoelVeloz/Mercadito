@@ -13,16 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('wallets', function (Blueprint $table) {
             $table->id();
-            $table->decimal("price");
-            $table->string("title");
-            $table->json("data");
+            $table->decimal("balance");
+            $table->decimal("decimal_places");
             $table->unsignedBigInteger("user_id");
-            $table->unsignedBigInteger("category_id");
 
             $table->foreign("user_id")->references("id")->on("roles");
-            $table->foreign("category_id")->references("id")->on("categories");
             
             $table->timestamps();
         });
@@ -35,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('wallets');
     }
 };
