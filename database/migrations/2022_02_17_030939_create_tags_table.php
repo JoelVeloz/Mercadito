@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    //Hola mundo trabajando como esclabo
     /**
      * Run the migrations.
      *
