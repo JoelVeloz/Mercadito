@@ -54,6 +54,9 @@
     import JetValidationErrors from '@/Jetstream/ValidationErrors.vue'
     import { Head, Link } from '@inertiajs/inertia-vue3';
 
+    import Button from '@/Components/Button.vue'
+
+
     export default defineComponent({
         components: {
             Head,
@@ -65,6 +68,7 @@
             JetLabel,
             JetValidationErrors,
             Link,
+            Button
         },
 
         props: {
